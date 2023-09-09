@@ -7,6 +7,14 @@
     <artifactId>Lottery</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>lottery-application</module>
+        <module>lottery-common</module>
+        <module>lottery-domain</module>
+        <module>lottery-infrastructure</module>
+        <module>lottery-interfaces</module>
+        <module>lottery-rpc</module>
+    </modules>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -17,6 +25,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <sourceEncoding>UTF-8</sourceEncoding>
     </properties>
 
     <dependencyManagement>
