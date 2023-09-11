@@ -24,7 +24,7 @@
     </parent>
 
     <properties>
-        <java.version>1.8</java.version>
+        <jdk.version>1.8</jdk.version>
         <sourceEncoding>UTF-8</sourceEncoding>
     </properties>
 
