@@ -18,6 +18,8 @@ public class DefaultRateRandomDrawAlgorithm extends BaseAlgorithm {
 
     @Override
     public String randomDraw(Long strategyId, List<String> excludeAwardIds) {
+        BigDecimal differenceDenominator = BigDecimal.ZERO;
+
         // 排除已中奖的奖品id
         List<AwardRateInfo> differenceAwardRateList = new ArrayList<>();
         List<AwardRateInfo> awardRateInfoList = awardRateInfoMap.get(strategyId);
@@ -25,6 +27,7 @@ public class DefaultRateRandomDrawAlgorithm extends BaseAlgorithm {
             if (excludeAwardIds.contains(awardRateInfo.getAwardId())) {
                 continue;
             }
+            differenceDenominator = differenceDenominator.add(awardRateInfo.getAwardRate());
             differenceAwardRateList.add(awardRateInfo);
         }
 
@@ -43,7 +46,7 @@ public class DefaultRateRandomDrawAlgorithm extends BaseAlgorithm {
 
         for (AwardRateInfo awardRateInfo : differenceAwardRateList) {
             int rateVal = awardRateInfo.getAwardRate()
-                    .divide(BigDecimal.ONE, 2, RoundingMode.UP)
+                    .divide(differenceDenominator, 2, RoundingMode.UP)
                     .multiply(new BigDecimal(100)).intValue();
             if (rateVal + cursorVal >= randomVal) {
                 awardId = awardRateInfo.getAwardId();
