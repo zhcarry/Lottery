@@ -1,13 +1,14 @@
 package cn.itedus.lottery.domain.strategy.service.draw;
 
 import cn.itedus.lottery.domain.strategy.model.aggregates.StrategyRich;
+import cn.itedus.lottery.domain.strategy.model.vo.AwardBriefVO;
 import cn.itedus.lottery.domain.strategy.repository.IStrategyRepository;
-import cn.itedus.lottery.infrastructure.pojo.Award;
 
 import javax.annotation.Resource;
 
 /**
  * 抽奖策略数据支撑，一些通用的数据服务
+ * @author Zheng'H'ao
  */
 public class DrawStrategyDataSupport extends DrawConfig{
 
@@ -28,7 +29,7 @@ public class DrawStrategyDataSupport extends DrawConfig{
      * @param awardId 奖品ID
      * @return
      */
-    public Award queryAwardInfoByAwardId(String awardId) {
+    public AwardBriefVO queryAwardInfoByAwardId(String awardId) {
         return strategyRepository.queryAwardInfo(awardId);
     }
 

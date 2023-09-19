@@ -1,7 +1,7 @@
 package cn.itedus.lottery.domain.strategy.repository;
 
 import cn.itedus.lottery.domain.strategy.model.aggregates.StrategyRich;
-import cn.itedus.lottery.infrastructure.pojo.Award;
+import cn.itedus.lottery.domain.strategy.model.vo.AwardBriefVO;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public interface IStrategyRepository {
      * @param awardId
      * @return
      */
-    Award queryAwardInfo(String awardId);
+    AwardBriefVO queryAwardInfo(String awardId);
 
     /**
      * 根据策略ID查询该策略下库存不足的奖品列表

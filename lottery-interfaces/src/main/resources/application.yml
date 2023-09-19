@@ -1,11 +1,11 @@
 server:
-  port: 80
+  port: 8080
 
 spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/lottery?serverTimezone=UTC&useSSL=false&characterEncoding=UTF8&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://127.0.0.1:3306/lottery?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
@@ -17,6 +17,8 @@ dubbo:
   application:
     name: Lottery
     version: 1.0.0
+    parameters:
+      unicast: false
   registry:
     address: N/A #multicast://224.5.6.7:1234
   protocol:

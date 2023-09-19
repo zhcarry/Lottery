@@ -37,11 +37,16 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+
+        <!--<dependency>
             <groupId>cn.itedus.lottery</groupId>
             <artifactId>lottery-infrastructure</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>cn.itedus.lottery</groupId>
             <artifactId>lottery-common</artifactId>

@@ -33,14 +33,14 @@ public class ApiTest {
     public void test_insert() {
         Activity activity = new Activity();
         activity.setActivityId(100002L);
-        activity.setActivityName("测试活动");
-        activity.setActivityDesc("仅用于插入数据测试");
+        activity.setActivityName("test activity");
+        activity.setActivityDesc("test");
         activity.setBeginDateTime(new Date());
         activity.setEndDateTime(new Date());
         activity.setStockCount(100);
         activity.setTakeCount(10);
         activity.setState(0);
-        activity.setCreator("xiaofuge");
+        activity.setCreator("zhangsan");
         activityDao.insert(activity);
     }
 

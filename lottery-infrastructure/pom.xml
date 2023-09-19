@@ -24,6 +24,12 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.1.4</version>
         </dependency>
+
+        <dependency>
+            <groupId>cn.itedus.lottery</groupId>
+            <artifactId>lottery-domain</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

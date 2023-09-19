@@ -1,15 +1,10 @@
-package cn.itedus.lottery.infrastructure.pojo;
-
-import java.util.Date;
+package cn.itedus.lottery.domain.activity.model.vo;
 
 /**
- * 奖品明细
- * @author zh
+ * @description: 奖品信息配置
+ * @author Zheng'H'ao
  */
-public class Award {
-
-    /** 自增ID */
-    private Long id;
+public class AwardVO {
 
     /** 奖品ID */
     private String awardId;
@@ -22,20 +17,6 @@ public class Award {
 
     /** 奖品内容「描述、奖品码、sku」 */
     private String awardContent;
-
-    /** 创建时间 */
-    private Date createTime;
-
-    /** 修改时间 */
-    private Date updateTime;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getAwardId() {
         return awardId;
@@ -69,19 +50,14 @@ public class Award {
         this.awardContent = awardContent;
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    @Override
+    public String toString() {
+        return "AwardVO{" +
+                "awardId='" + awardId + '\'' +
+                ", awardType=" + awardType +
+                ", awardName='" + awardName + '\'' +
+                ", awardContent='" + awardContent + '\'' +
+                '}';
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
 }
